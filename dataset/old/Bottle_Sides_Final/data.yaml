@@ -1,0 +1,15 @@
+names:
+- bottom
+- code
+- label
+- neck
+nc: 4
+roboflow:
+  license: CC BY 4.0
+  project: 331231231212fghghfgh-internet-images
+  url: https://universe.roboflow.com/amandanamikata-oc8a2/331231231212fghghfgh-internet-images/dataset/5
+  version: 5
+  workspace: amandanamikata-oc8a2
+test: test/images
+train: train/images
+val: valid/images

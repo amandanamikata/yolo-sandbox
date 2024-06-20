@@ -1,0 +1,16 @@
+names:
+- bottom
+- cap
+- code
+- label
+- neck
+nc: 5
+roboflow:
+  license: CC BY 4.0
+  project: 331231231212fghghfgh
+  url: https://universe.roboflow.com/amandanamikata/331231231212fghghfgh/dataset/2
+  version: 2
+  workspace: amandanamikata
+test: test/images
+train: train/images
+val: valid/images

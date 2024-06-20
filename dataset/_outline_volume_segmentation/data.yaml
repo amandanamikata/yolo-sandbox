@@ -1,0 +1,12 @@
+names:
+- bottle
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: outline_volume_segmentation
+  url: https://universe.roboflow.com/amandanamikata/outline_volume_segmentation/dataset/2
+  version: 2
+  workspace: amandanamikata
+test: test/images
+train: train/images
+val: valid/images
