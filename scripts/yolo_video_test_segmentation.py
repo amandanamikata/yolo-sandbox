@@ -13,7 +13,7 @@ classNames = [
 model = YOLO(r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/runs/segment/yolov8n_seg_vol_hue_saturation-good/weights/best.pt')
 model.predict(
     
-    source="0",
+    source="/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/2,0COCACOLA ZERO FSC.mp4",
     show=True,
     conf=0.5,   
     

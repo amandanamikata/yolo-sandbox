@@ -1,0 +1,15 @@
+names:
+- bottom
+- cap
+- code
+- no_cap
+nc: 4
+roboflow:
+  license: CC BY 4.0
+  project: detection_pieces_machine_and_internet_images
+  url: https://universe.roboflow.com/amandanamikata/detection_pieces_machine_and_internet_images/dataset/9
+  version: 9
+  workspace: amandanamikata
+test: test/images
+train: train/images
+val: valid/images

@@ -13,8 +13,8 @@ classNames = [
 ]
 
 #model = YOLO(r'C:\Users\amanda\Desktop\Yolo\runs\detect\yolov8n_full_lenght5\weights\best.pt')
-model = YOLO(r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/runs/detect/yolov8n_pieces_detect_custom_greyscale_noise-good/weights/best.pt')
-model.predict(source="0", show=True, conf=0.5)  
+model = YOLO(r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/runs/detect/yolov8n_pieces_detect_hue_color_pieces-good/weights/best.pt')
+model.predict(source="/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/2,0COCA-COLA ZERO TCT.mp4", show=True, conf=0.5)  
    
 # video = r''
 

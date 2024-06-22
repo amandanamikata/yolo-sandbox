@@ -10,7 +10,7 @@ from gi.repository import Gtk
 from roboflow import Roboflow
 rf = Roboflow(api_key="iCOoPmE9BfuEK86Wmqxi")
 project = rf.workspace("amandanamikata").project("detection_pieces_machine_and_internet_images")
-version = project.version(10)
+version = project.version(9)
 dataset = version.download("yolov8")
 
 v = '8n'
@@ -21,17 +21,17 @@ model = YOLO(f'yolov{v}.pt')
 
 model.to(device)
 
-results = model.train(
-    data=r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/detection_pieces_machine_and_internet_images-10/data.yaml',
-    imgsz=640,
-    epochs=20,
-    batch=16,
-    augment=False,
-    int8=True,
-    half=False,
-    simplify=True,        
-    name=f'yolov{v}_pieces_detect_hue_color_pieces'
-)
+# results = model.train(
+#     data=r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/detection_pieces_machine_and_internet_images-10/data.yaml',
+#     imgsz=640,
+#     epochs=20,
+#     batch=16,
+#     augment=False,
+#     int8=True,
+#     half=False,
+#     simplify=True,        
+#     name=f'yolov{v}_pieces_detect_hue_color_pieces'
+# )
 
 
 # model = YOLO('yolov8n.pt')
@@ -41,3 +41,25 @@ results = model.train(
 #    conf=0.25
 # )
 
+model.train(
+        data=r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/detection_pieces_machine_and_internet_images-9/data.yaml',
+        imgsz=640,
+        epochs=20,
+        batch=16,
+        augment=False,
+        int8=True,
+        half=False,
+        simplify=True, 
+        format= 'openvino',       
+        name=f'yolov{v}_pieces_detect_greyscale_noise_openvino'
+        ##VER rect = parametro
+    )
+    
+model.export(
+    data=r'/home/mandanamikata/Desktop/BKP_AMANDA/Yolo/detection_pieces_machine_and_internet_images-9/data.yaml',
+    format='openvino',
+    int8=True,
+    half=False,
+    imgsz=640,
+    simplify=True if 'openvino' in ['onnx', 'engine'] else None
+    )
